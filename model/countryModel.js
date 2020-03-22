@@ -12,7 +12,7 @@ exports.getAllCountry = () => {
                     latitude,
                     longitude
                 from covid_19.daily_reports
-                    where date_imported = CURRENT_DATE
+                    where DATE(date_imported) = (current_date - 1)
                 group by country_region`, 
         nestTables: false};
 

@@ -1,8 +1,7 @@
 const express = require("express")
 const router = express.Router()
+const countryController = require('../controllers/countryController')
 
-router.get('/', function (req, res) {
-    res.send('GET request to country')
-  })
+router.get('/', countryController.getAllCountry)
 
 exports.countryRouter = router

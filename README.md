@@ -8,9 +8,11 @@ This repo is not intended for comercial use.
 
 | Endpoint  | Description |
 | ------------- | ------------- |
-| /v1/country  | Retrieves latest data for all affected countries  |
-| /v1/country/countryName  | Retrieves latest data selected country  |
-| /v1/country/countryName?view=timeline  | Retrieves timeline series starting from March 01, 2020 to current date  |
+| https://covid-19--api.herokuapp.com/v1/country  | Retrieves latest data for all affected countries  |
+| https://covid-19--api.herokuapp.com/v1/country/Brazil  | Retrieves latest data selected country  |
+| https://covid-19--api.herokuapp.com/v1/country/Brazil?view=timeline  | Retrieves timeline series starting from March 01, 2020 to current date  |
+
+
 
 ## DashBoard
 

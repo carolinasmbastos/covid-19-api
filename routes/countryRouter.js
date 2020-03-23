@@ -4,4 +4,6 @@ const countryController = require('../controllers/countryController')
 
 router.get('/', countryController.getAllCountry)
 
+router.get('/:country', countryController.getCountry)
+
 exports.countryRouter = router

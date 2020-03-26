@@ -8,7 +8,8 @@ const connectionPool = mysql.createPool({
   password : process.env.DB_PASS,
   database : process.env.DB_NAME,
   connectionLimit: 10,
-  multipleStatements: true
+  multipleStatements: true,
+  timezone: 'Z'
 });
 
 exports.cp = connectionPool;

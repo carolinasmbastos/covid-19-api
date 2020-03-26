@@ -3,7 +3,9 @@ const countryModel = require('../model/countryModel')
 exports.getAllCountry = (req, res, next) => {
 
     countryModel.getAllCountry()
-        .then(countries=>{res.send(countries)})
+        .then(countries=>{
+            res.send(countries)
+        })
         .catch(error=>{
             console.log(error)
             next(error)
@@ -11,7 +13,7 @@ exports.getAllCountry = (req, res, next) => {
 }
 
 exports.getCountry = (req, res, next) => {
-    
+
     if (req.query.view === 'timeline') {
 
         countryModel.getCountryTimeline(req.params.country)
@@ -23,6 +25,7 @@ exports.getCountry = (req, res, next) => {
                         latitude: result[0].latitude,
                         longitude: result[0].longitude,
                         timeline : result.map((item) => {
+                            console.log(item.confirmed, item.deaths, item.recovered, item.lastUpdate)
                             return {
                                 confirmed : item.confirmed,
                                 deaths: item.deaths,

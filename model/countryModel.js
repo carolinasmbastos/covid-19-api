@@ -60,7 +60,7 @@ exports.getCountryByName = (country) => {
 exports.getCountryTimeline = (country) => {
 
     let table = 'daily_reports';
-    if (country == 'US') {
+    if (country.toLowerCase() == 'us') {
         table += '_US'
     } 
     

@@ -25,13 +25,8 @@ exports.getCountry = (req, res, next) => {
                         latitude: result[0].latitude,
                         longitude: result[0].longitude,
                         timeline : result.map((item) => {
-                            console.log(item.confirmed, item.deaths, item.recovered, item.lastUpdate)
-                            return {
-                                confirmed : item.confirmed,
-                                deaths: item.deaths,
-                                recovered : item.recovered,
-                                lastUpdate : item.lastUpdate
-                            }
+                            let {confirmed, deaths, recovered, lastUpdate} = item
+                            return {confirmed, deaths, recovered, lastUpdate};
                         })
                     }
                     res.send(ret)

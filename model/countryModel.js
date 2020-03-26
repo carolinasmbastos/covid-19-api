@@ -75,7 +75,7 @@ exports.getCountryTimeline = (country) => {
                 from covid_19.${table}		
                     where country_region like ${cp.escape(country)}
                 group by country_region, date_imported 
-                order by date_imported desc`, 
+                order by date_imported`, 
         nestTables: false};
     //console.log(options.sql)
 

@@ -16,7 +16,7 @@ This repo is not intended for comercial use.
 
 ## DashBoard
 
-Timeline visualization available at:
+Timeline visualization available at: https://flattenthecurve.netlify.com/
 
 
 ## Contact

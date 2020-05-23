@@ -47,7 +47,7 @@ exports.getCountry = (req, res, next) => {
             .then(country=>{
                 //console.log(country)
                 if (country.length > 0) {
-                    res.send(country)
+                    res.send(country[0])
                 } else {
                     let error = new Error("No Data Found for: "+ req.params.country)
                     console.log(error)

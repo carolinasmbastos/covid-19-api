@@ -20,9 +20,3 @@ let errorHandler = (error, req, res, next) => {
 app.use(errorHandler);
 
 module.exports = app;
-
-// app.set("port", process.env.PORT || 8080);
-
-// const server = app.listen(app.get("port"), () => {
-//   console.log("Server listening on ", app.get("port"));
-// });
